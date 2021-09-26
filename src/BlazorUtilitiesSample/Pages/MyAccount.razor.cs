@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.Components.WebAssembly.Http;
 using Microsoft.JSInterop;
 using BlazorUtilitiesSample;
 using BlazorUtilitiesSample.Shared;
+using AKSoftware.Blazor.Utilities;
 
 namespace BlazorUtilitiesSample.Pages
 {
@@ -24,7 +25,11 @@ namespace BlazorUtilitiesSample.Pages
         private void UpdateUsername()
         {
             // Set the new value of the username 
-            UserSettings.DefaultUsername = _username; 
+            UserSettings.DefaultUsername = _username;
+
+            // Send the updated
+            // You can use the Send function to send the sender object with the value you want to send 
+            MessagingCenter.Send("username_updated", _username);
         }
 
     }

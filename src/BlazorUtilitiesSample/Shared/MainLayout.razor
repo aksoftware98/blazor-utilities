@@ -1,5 +1,8 @@
 ﻿@inherits LayoutComponentBase
 
+@using AKSoftware.Blazor.Utilities
+@using BlazorUtilitiesSample.Pages
+
 <div class="page">
     <div class="sidebar">
         <NavMenu />
@@ -7,7 +10,6 @@
 
     <div class="main">
         <div class="top-row px-4">
-            <a href="http://blazor.net" target="_blank" class="ml-md-auto">About</a>
             <a href="/myaccount" target="_blank" class="ml-md-auto">Welcome @_username</a>
         </div>
 
@@ -20,6 +22,19 @@
 @code
 {
 
-    private string _username = UserSettings.DefaultUsername; 
+    private string _username = UserSettings.DefaultUsername;
+
+    protected override void OnInitialized()
+    {
+        string newUsername = string.Empty;
+
+        // Subscribe to "username_updated" message so we can take an action whenever the username gots udpatd from the my account page
+        MessagingCenter.Subscribe<string>(this, "username_updated", arg =>
+        {
+            _username = arg;
+            StateHasChanged(); 
+        });
+        base.OnInitialized();
+    }
 
 }
