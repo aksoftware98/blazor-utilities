@@ -1,3 +1,16 @@
 ﻿@page "/MyAccount"
 
 
+<h3>Update my Username</h3>
+<EditForm Model="new object()" OnValidSubmit="UpdateUsername">
+	<div class="row">
+		<div class="col-4">
+			<div class="form-group">
+				<label>New username:</label>
+				<input type="text" @bind-value="_username" />
+				<button type="submit" class="btn btn-primary m-3">Save</button>
+			</div>
+		</div>
+	</div>
+</EditForm>
+
