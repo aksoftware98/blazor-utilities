@@ -29,7 +29,7 @@ namespace BlazorUtilitiesSample.Pages
 
             // Send the updated
             // You can use the Send function to send the sender object with the value you want to send 
-            MessagingCenter.Send("username_updated", _username);
+            MessagingCenter.Send(this, "username_updated", _username);
         }
 
     }

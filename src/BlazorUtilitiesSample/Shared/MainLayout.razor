@@ -28,12 +28,12 @@
     {
         string newUsername = string.Empty;
 
-        // Subscribe to "username_updated" message so we can take an action whenever the username gots udpatd from the my account page
-        MessagingCenter.Subscribe<string>(this, "username_updated", arg =>
-        {
-            _username = arg;
-            StateHasChanged(); 
-        });
+        // Subscribe with the current instance of the component to username_updated message and update the value of the _username variable as a callback to the message
+       MessagingCenter.Subscribe<MyAccount, string>(this, "username_updated", (sender, arg) =>
+		{
+			_username = arg;
+			StateHasChanged();
+		});
         base.OnInitialized();
     }
 
