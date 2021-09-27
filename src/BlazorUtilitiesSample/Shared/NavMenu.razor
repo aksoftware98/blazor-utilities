@@ -1,4 +1,6 @@
 ﻿@using AKSoftware.Blazor.Utilities
+@using BlazorUtilitiesSample.Pages
+
 <div class="top-row pl-4 navbar navbar-dark">
 	<a class="navbar-brand" href="">BlazorUtilitiesSample</a>
 	<button class="navbar-toggler" @onclick="ToggleNavMenu">
@@ -10,7 +12,7 @@
 	<ul class="nav flex-column">
 		<li class="nav-item px-3">
 			<NavLink class="nav-link" href="myaccount">
-				<span class="oi oi-person" aria-hidden="true"></span> Welcome @_username
+				<span class="oi oi-person" aria-hidden="true"></span> @_username
 			</NavLink>
 		</li>
 		<li class="nav-item px-3">
@@ -46,7 +48,7 @@
 	protected override void OnInitialized()
 	{
 		// Subscribe to "username_updated" message so we can take an action whenever the username gots udpatd from the my account page
-		MessagingCenter.Subscribe<string>(this, "username_updated", arg =>
+		MessagingCenter.Subscribe<MyAccount, string>(this, "username_updated", (sender, arg) =>
 		{
 			_username = arg;
 			StateHasChanged();
