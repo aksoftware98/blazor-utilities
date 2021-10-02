@@ -1,15 +1,13 @@
 ﻿@page "/MyAccount"
 
 <h3>Update my Username</h3>
-<EditForm Model="new object()" OnValidSubmit="UpdateUsername">
 	<div class="row">
 		<div class="col-4">
 			<div class="form-group">
 				<label>New username:</label>
-				<input type="text" @bind-value="_username" class="form-control"/>
-				<button type="submit" class="btn btn-primary m-3">Save</button>
-			</div>
+				<input type="text" @bind-value="_username" class="form-control" @onkeyup="UpdateUsername"/>
+				<button type="submit" class="btn btn-primary m-3" @onclick="() => UpdateUsername(new KeyboardEventArgs())">Save</button>
 		</div>
 	</div>
-</EditForm>
+</div>
 

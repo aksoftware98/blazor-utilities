@@ -22,7 +22,7 @@ namespace BlazorUtilitiesSample.Pages
 
         private string _username = UserSettings.DefaultUsername;
 
-        private void UpdateUsername()
+        private void UpdateUsername(KeyboardEventArgs args)
         {
             // Set the new value of the username 
             UserSettings.DefaultUsername = _username;
