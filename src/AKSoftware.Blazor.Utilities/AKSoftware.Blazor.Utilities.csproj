@@ -13,6 +13,10 @@ MessaingCenter idea for Blazor was inspired from Xamarin.Forms's MessagingCenter
     <PackageReleaseNotes>The first version that contains the support for the MessagingCenter class to be used to send data across components effeciently</PackageReleaseNotes>
     <PackageTags>aksoftware, blazor, messagingcenter, messagin, xamarin.forms</PackageTags>
     <Title>AKSoftware.Blazor.Utilities</Title>
+    <PackageIcon>Blazor Utitlies.png</PackageIcon>
+    <RepositoryUrl>https://github.com/aksoftware98/blazor-utilities</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseFile>D:\Open Source\blazor-utilities\LICENSE</PackageLicenseFile>
   </PropertyGroup>
 
   
@@ -29,6 +33,13 @@ MessaingCenter idea for Blazor was inspired from Xamarin.Forms's MessagingCenter
 
   <ItemGroup>
     <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Blazor Utitlies.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
   <ProjectExtensions>
