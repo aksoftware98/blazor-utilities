@@ -24,12 +24,20 @@ namespace BlazorUtilitiesSample.Pages
 
         private void UpdateUsername(KeyboardEventArgs args)
         {
-            // Set the new value of the username 
-            UserSettings.DefaultUsername = _username;
+            if (args.Key == "Enter")
+            {
+                // Set the new value of the username 
+                UserSettings.DefaultUsername = _username;
 
-            // Send the updated
-            // You can use the Send function to send the sender object with the value you want to send 
-            MessagingCenter.Send(this, "username_updated", _username);
+                // Send the updated
+                // You can use the Send function to send the sender object with the value you want to send 
+                MessagingCenter.Send(this, "username_updated", _username);
+            }
+        }
+
+        private void OnInputChange(ChangeEventArgs e)
+        {
+            _username = e.Value.ToString();
         }
 
     }
