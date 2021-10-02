@@ -8,7 +8,6 @@ MessaingCenter idea for Blazor was inspired from Xamarin.Forms's MessagingCenter
     <PackageVersion>1.0</PackageVersion>
     <Authors>Ahmad Mozaffar</Authors>
     <Copyright>Ahmad Mozaffar 2021</Copyright>
-    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageProjectUrl>https://github.com/aksoftware98/blazor-utlities</PackageProjectUrl>
     <PackageReleaseNotes>The first version that contains the support for the MessagingCenter class to be used to send data across components effeciently</PackageReleaseNotes>
     <PackageTags>aksoftware, blazor, messagingcenter, messagin, xamarin.forms</PackageTags>
@@ -16,13 +15,25 @@ MessaingCenter idea for Blazor was inspired from Xamarin.Forms's MessagingCenter
     <PackageIcon>Blazor Utitlies.png</PackageIcon>
     <RepositoryUrl>https://github.com/aksoftware98/blazor-utilities</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageLicenseFile>D:\Open Source\blazor-utilities\LICENSE</PackageLicenseFile>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+
+  
+  <ItemGroup>
+    <None Include="LICENSE" Pack="true" PackagePath="" />
+  </ItemGroup>
+
+  
+  <ItemGroup>
+    <EmbeddedResource Include="LICENSE" />
+  </ItemGroup>
   <ItemGroup>
     <SupportedPlatform Include="browser" />
   </ItemGroup>
