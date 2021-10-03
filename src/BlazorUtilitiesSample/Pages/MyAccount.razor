@@ -2,11 +2,11 @@
 
 <h3>Update my Username</h3>
 	<div class="row">
-		<div class="col-4">
-			<div class="form-group">
+		<div class="col-4" style="border-radius:5px;box-shadow: 0 3.2px 7.2px 0 rgb(0 0 0 / 13%), 0 0.6px 1.8px 0 rgb(0 0 0 / 11%);padding:5px">
+			<div class="form-group" style="margin:5px">
 				<label>New username:</label>
-				<input type="text" @oninput="OnInputChange" value="@_username" class="form-control" @onkeyup="UpdateUsername"/>
-				<button type="submit" class="btn btn-primary m-3" @onclick="() => UpdateUsername(new KeyboardEventArgs())">Save</button>
+				<input type="text" @oninput="OnInputChange" value="@_username" class="form-control" @onkeyup="OnEnterClicked"/>
+				<button type="submit" class="btn btn-primary m-3" @onclick="UpdateUsername">Save</button>
 		</div>
 	</div>
 </div>
