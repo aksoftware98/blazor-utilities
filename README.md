@@ -21,7 +21,7 @@ The following illustration shows the benefits of using MessagingCenter to send d
 ## Package Content:  
 For now package the **AKSoftware.Blazor.Utilities** just contains the ***MessagingCenter*** service which is the same that is implemented in Xamarin.Forms to be used in Blazor projects as a service to send the data across the components using the Publish - Subscription pattern in addition to the existing model of Parameters & Event Callbacks.
 
-> **Note:** The messaging center class with the current package is the same class and cloned from the Xamarin.Forms repository from the following link [Xamarin.Forms](Xamarin.Forms%20Repository)
+> **Note:** The messaging center class with the current package is the same class and cloned from the Xamarin.Forms repository from the following link [Xamarin.Forms](https://github.com/xamarin/Xamarin.Forms/blob/5.0.0/Xamarin.Forms.Core/MessagingCenter.cs)
 
 ## Check out the sample project:
 In the current repository you can find a sample project to use the MessagingCenter service in Blazor that shows how to send a string value from one component to two other components without a direct relationship between them and update their states. 
