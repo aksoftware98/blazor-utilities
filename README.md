@@ -1,12 +1,11 @@
 # Welcome to Messaging Center Blazor Utitlity!
 
 
-<img src="https://github.com/aksoftware98/blazor-utilities/blob/main/Assets/Blazor%20Utitlies.png?raw=true" alt="drawing" width="200"/>
+<img src="https://github.com/aksoftware98/blazor-utilities/blob/main/Assets/Blazor%20Utitlies.png?raw=true" alt="drawing" width="200" style="width:200px"/>
 
 ### AKSoftware.Blazor.Utilities 
-[![NuGet Status](https://img.shields.io/nuget/dt/AKSoftware.Blazor.Utilities?color=nuget&label=Nuget&style=plastic)](http://nugetstatus.com/packages/AKSoftware.Blazor.Utilities)
 
-#### :zap: :zap: :rocket: Send data across your components fluently with the Messaging Center :rocket: :rocket: :zap:
+#### ⚡ ⚡ 🚀 Send data across your components fluently with the Messaging Center ⚡ ⚡ 🚀
 Paramters, Cascading Parameters and Event Callbacks are ways to send data across components but MessagingCenter is much easier and straightforward
 ![MessagingCenter](https://github.com/aksoftware98/blazor-utilities/blob/main/Assets/MessagingCenter%20Sample.gif?raw=true)
 
@@ -28,7 +27,7 @@ In the current repository you can find a sample project to use the MessagingCent
 The example shows using updating the username in a form component then using MessagingCenter we can send that update to the NavMenu component and the MainLayout and update the value there. 
 Check out the following folder: 
 
-## :earth_americas: :construction_worker: Get Started with Blazor MessagingCenter :golf:
+## 🌎 👷 Get Started with Blazor MessagingCenter ⛳
 Make sure to instal the NuGet package of the library using the ***NuGet command*** 
 ``` 
 	Install-Package AKSoftware.Blazor.Utilities
@@ -44,7 +43,7 @@ Now in the **_imports.razor** and add the following namesapce
 @using AKSoftware.Blazor.Utilities
 ```
 
-## :zap:  🚀 Publish a message  🚀 :zap:
+## ⚡  🚀 Publish a message  🚀 ⚡
 From the component that you want to send data from example a sample string like the example in the repository 
 
 > The code takes a the sender object as a parameter, the filter of the message like for this example "greeting_message" which will be used by other components to receive the message, and the last parameter is the value to be sent
@@ -57,7 +56,7 @@ public void SendMessage()
 }
 ```
 
-## :airplane: Receive a message from destination component :airplane:
+## ✈️ Receive a message from destination component ✈️
 
 In the destination component all you can do is calling the subscribe method to subscribe for a target of messaging 
 
@@ -74,9 +73,9 @@ public void SubscribeToMessage()
 }
 ```
 
-### Enjoy it :roller_coaster:
+### Enjoy it 🎢
 
-## :construction: How to contribute
+## 🚧 How to contribute
 Contributions are welcomed to the current repository you can get started by 
 
  - Cloning the project
@@ -84,8 +83,8 @@ Contributions are welcomed to the current repository you can get started by
  - Submit a PR 
  - You can find me here https://ahmadmozaffar.net
 
-## :warning: You have problems???
+## ⚠️ You have problems???
 Feel free to open any issue directly from the issues section here [GitHub Issues](https://github.com/aksoftware98/blazor-utilities/issues)
 
 
-#### Developed with all :heart: by :computer: [Ahmad Mozaffar](https://ahmadmozaffar.net)
+#### Developed with all ❤️ by 💻 [Ahmad Mozaffar](https://ahmadmozaffar.net)
