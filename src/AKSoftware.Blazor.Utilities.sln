@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31710.8
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AKSoftware.Blazor.Utilities", "AKSoftware.Blazor.Utilities\AKSoftware.Blazor.Utilities.csproj", "{710AC5DE-E9AF-489E-A5DB-1E0BCB5BA296}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AKSoftware.Blazor.Utilities", "AKSoftware.Blazor.Utilities\AKSoftware.Blazor.Utilities.csproj", "{710AC5DE-E9AF-489E-A5DB-1E0BCB5BA296}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorUtilitiesSample", "BlazorUtilitiesSample\BlazorUtilitiesSample.csproj", "{B6911471-D8E8-4661-A48F-D52160FA283A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorUtilitiesSample", "BlazorUtilitiesSample\BlazorUtilitiesSample.csproj", "{B6911471-D8E8-4661-A48F-D52160FA283A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingCartSample", "ShoppingCartSample\ShoppingCartSample.csproj", "{3F4900EC-A3F1-4AC2-A886-94FBB342D63A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{B6911471-D8E8-4661-A48F-D52160FA283A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6911471-D8E8-4661-A48F-D52160FA283A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6911471-D8E8-4661-A48F-D52160FA283A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F4900EC-A3F1-4AC2-A886-94FBB342D63A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F4900EC-A3F1-4AC2-A886-94FBB342D63A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F4900EC-A3F1-4AC2-A886-94FBB342D63A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F4900EC-A3F1-4AC2-A886-94FBB342D63A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
