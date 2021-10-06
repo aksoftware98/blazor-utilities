@@ -1,17 +1,24 @@
 ﻿@inherits LayoutComponentBase
 
 <div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
+	@*   <div class="sidebar">
+		<NavMenu />
+		</div>
+	*@
+	<div class="main">
+		<div class="top-row px-4">
+			<span class="ml-md-auto">
+				<button type="button" class="btn btn-light position-relative">
+					My Cart
+					<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary" style="color:white">
+						$0
+					</span>
+				</button>
+			</span>
+		</div>
 
-    <div class="main">
-        <div class="top-row px-4">
-            <a href="http://blazor.net" target="_blank" class="ml-md-auto">About</a>
-        </div>
-
-        <div class="content px-4">
-            @Body
-        </div>
-    </div>
+		<div class="content px-6">
+			@Body
+		</div>
+	</div>
 </div>
