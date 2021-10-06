@@ -1,0 +1,30 @@
+﻿.cart-list {
+    margin-top: 4px;
+    padding: 2px 5px;
+    font-size: 17px;
+    border-left: 1px solid lightgray;
+}
+
+    .cart-list .cart-item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 6px;
+        padding-bottom: 4px;
+        padding-top: 4px;
+        font-weight: 300;
+        border-bottom: 1px solid lightgray;
+    }
+
+.cart-item .remove-btn {
+    color: red;
+    cursor: pointer;
+    font-size: 21px;
+    font-weight: 300;
+    transition: 0.2s;
+}
+
+    .cart-item .remove-btn:hover {
+        color: darkred;
+    }

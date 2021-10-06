@@ -1,4 +1,15 @@
-﻿<h3>Component1</h3>
+﻿<h4>My Cart</h4>
+
+<div class="cart-list">
+	@foreach(var item in _items)
+	{
+		<div class="cart-item">
+			<span>@item.Name ($@item.ItemPrice x @item.Quantity) - $@item.TotalPrice</span>
+
+			<span class="remove-btn">X</span>
+		</div>
+	}
+</div>
 
 @code {
 

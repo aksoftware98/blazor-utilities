@@ -128,6 +128,15 @@ namespace ShoppingCartSample.Services
                 _cartItems.Remove(cartItem);
             }
         }
+
+        /// <summary>
+        /// Retrieve the list of the item ids existing in the cart each id represents an item and multiple values represents the quantity 
+        /// </summary>
+        /// <returns></returns>
+        public IEnumerable<string> GetInCartItemIds()
+        {
+            return _cartItems;
+        }
     }
 
 }

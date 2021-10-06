@@ -12,5 +12,7 @@ namespace ShoppingCartSample.Services
 
         void RemoveItemFromCart(string itemId);
 
+        IEnumerable<string> GetInCartItemIds();
+
     }
 }

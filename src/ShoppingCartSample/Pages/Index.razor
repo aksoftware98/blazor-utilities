@@ -2,9 +2,17 @@
 
 <h1>Welcome to Blazor <b>Messaging Center</b></h1>
 
-This sample demonstrate how you can use the Pub-Sub pattern in your Blazor app to send data between the application' components efficiently by showing how the list of items components can update the 
+This sample demonstrate how you can use the Pub-Sub pattern in your Blazor app to send data between the application' components efficiently by showing how the list of items components can update the
 cart and the badge on the top right directly without any direct relationship
 
 <SurveyPrompt Title="How is Blazor working for you?" />
 
-<ShoppingCartSample.Components.ProductsList />
+<div class="row">
+	<div class="col-7">
+		<ShoppingCartSample.Components.ProductsList />
+	</div>
+	<div class="col-5">
+		<ShoppingCartSample.Components.ShoppingCart />
+	</div>
+</div>
+
