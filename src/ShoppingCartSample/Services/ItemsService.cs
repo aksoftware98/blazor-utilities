@@ -20,6 +20,7 @@ namespace ShoppingCartSample.Services
                 Name = "Surface Laptop Studio",
                 Price = 3250,
                 Quantity = 10,
+                Image = "/images/laptop-studio.webp",
             },
             new Item
             {
@@ -27,6 +28,7 @@ namespace ShoppingCartSample.Services
                 Name = "Surface Pro 8",
                 Price = 1200,
                 Quantity = 5,
+                Image = "/images/pro-8.webp",
             },
             new Item
             {
@@ -34,6 +36,7 @@ namespace ShoppingCartSample.Services
                 Name = "Surface Pro X",
                 Price = 1600,
                 Quantity = 8,
+                Image = "/images/pro-x.webp",
             },
             new Item
             {
@@ -41,39 +44,37 @@ namespace ShoppingCartSample.Services
                 Name = "Surface Laptop 4",
                 Price = 999,
                 Quantity = 10,
+                Image = "/images/laptop-4.webp",
             },
             new Item
             {
                 Id = Guid.NewGuid().ToString(),
-                Name = "Surface Ocean Mouse",
+                Name = "Surface Duo 2",
                 Price = 25,
-                Quantity = 50,
+                Quantity = 1600,
+                Image = "/images/duo-2.webp",
             },
             new Item
             {
                 Id = Guid.NewGuid().ToString(),
-                Name = "iPhone 13",
+                Name = "Surface Duo",
                 Price = 1100,
                 Quantity = 5,
+                Image = "/images/duo.webp",
             },
             new Item
             {
                 Id = Guid.NewGuid().ToString(),
-                Name = "iPhone 13 Pro",
+                Name = "Surface Go 3",
                 Price = 1300,
                 Quantity = 5,
-            },
-            new Item
-            {
-                Id = Guid.NewGuid().ToString(),
-                Name = "iPhone 13 Pro Max",
-                Price = 1750,
-                Quantity = 3,
+                Image = "/images/go.webp",
             },
             new Item
             {
                 Id = Guid.NewGuid().ToString(),
                 Name = "Surface Studio 2",
+                Image = "/images/studio.webp",
                 Price = 4500,
                 Quantity = 2,
             }

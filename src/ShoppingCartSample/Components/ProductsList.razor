@@ -1,0 +1,27 @@
+﻿
+<h3>Checkout the awesome products</h3>
+
+<div class="row">
+
+	@foreach (var item in _items)
+	{
+		<div class="col-2">
+			<div class="item-card">
+				<img src="@item.Image" />
+
+				<h6><b>@item.Name</b></h6>
+				@if (item.Quantity == 0)
+				{
+					<p class="out-of-stock">Out of stock</p>
+				}
+				else
+				{
+					<p class="in-stock">@item.Quantity in stock</p>	
+				}
+
+				<button class="store-btn">Add to Cart</button>
+			</div>
+		</div>
+	}
+</div>
+

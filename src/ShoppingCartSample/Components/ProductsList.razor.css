@@ -1,0 +1,51 @@
+﻿.item-card {
+    margin: 2px;
+    padding: 2px; 
+}
+
+    .item-card img {
+        width: 100%;
+        border-radius: 10px;
+        margin-top: 1px;
+        margin-bottom: 1px;
+    }
+
+    .item-card .in-stock {
+        margin-top: 1px;
+        margin-bottom: 1px;
+        color: forestgreen;
+    }
+
+    .item-card .out-of-stock {
+        margin-top: 1px;
+        margin-bottom: 1px;
+        color: darkred;
+    }
+
+    .item-card h6 {
+        margin-top: 2px;
+    }
+
+    .item-card button {
+        background-color: #0078d4;
+        color: white;
+        outline: none;
+        border:none;
+        border-radius: 20px;
+        width: 100%;
+        transition: 0.2s;
+    }
+
+        .item-card button:hover {
+            background-color: #004e8c;
+            outline: none;
+            border: none;
+            transform: scale(1.05);
+        }
+
+        .item-card button:active {
+            background-color: #0078d4;
+            outline: none; 
+            border: none; 
+            transform: scale(0.95);
+        }
