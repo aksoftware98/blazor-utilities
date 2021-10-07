@@ -34,7 +34,7 @@ namespace ShoppingCartSample.Shared
 			});
 
 			// Subscribe to the item_added message to increase the total amount of the cart
-			MessagingCenter.Subscribe<ShoppingCart, Item>(this, "item_added", (sender, item) =>
+			MessagingCenter.Subscribe<ProductsList, Item>(this, "item_added", (sender, item) =>
 			{
 				_totalAmount += item.Price;
 				StateHasChanged();
