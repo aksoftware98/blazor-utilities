@@ -5,11 +5,13 @@
 
 	@foreach (var item in _items)
 	{
+		bool _isInStock = item.Quantity != 0;
 		<div class="col-3">
 			<div class="item-card">
 				<img src="@item.Image" />
 
 				<h6><b>@item.Name</b></h6>
+				<h4>$@item.Price</h4>
 				@if (item.Quantity == 0)
 				{
 					<p class="out-of-stock">Out of stock</p>
@@ -19,7 +21,7 @@
 					<p class="in-stock">@item.Quantity in stock</p>	
 				}
 
-				<button class="store-btn" @onclick="() => AddItemToCart(item.Id)">Add to Cart</button>
+				<button class="store-btn @(_isInStock ? "" : "btn-disabled")" @onclick="() => AddItemToCart(item.Id)" disabled="@(!_isInStock)">Add to Cart</button>
 			</div>
 		</div>
 	}

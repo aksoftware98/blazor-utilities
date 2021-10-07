@@ -43,12 +43,13 @@ namespace ShoppingCartSample.Components
             // Remove the item from the cart
             ItemsService.RemoveItemFromCart(itemId);
 
-            // Send a message to notify other components about the removing process
-            MessagingCenter.Send(this, "item_removed", item);
+            // remove the item from the list of the UI 
+            var cartItem = _cartItems.SingleOrDefault(i => i.Id == itemId);
+            _cartItems.Remove(cartItem);
+
+            // Send a message to notify other components about the removing process and the total amount that has been removed
+            MessagingCenter.Send(this, "cartitem_removed", cartItem);
         }
-
-
-
 
         private List<CartItem> GetCartListFromCart()
         {
@@ -71,19 +72,4 @@ namespace ShoppingCartSample.Components
 
     }
 
-    /// <summary>
-    /// CartItem is a class that will be used to represent objects in the 
-    /// </summary>
-    public class CartItem
-    {
-        public string Name { get; set; }
-
-        public string Id { get; set; }
-
-        public int Quantity { get; set; }
-
-        public decimal ItemPrice { get; set; }
-
-        public decimal TotalPrice { get; set; }
-    }
 }

@@ -121,7 +121,7 @@ namespace ShoppingCartSample.Services
             var item = _items.SingleOrDefault(i => i.Id == itemId);
             if (item == null)
                 throw new ArgumentException("Item not found");
-            var cartItems = _cartItems.Where(i => i == itemId);
+            var cartItems = _cartItems.Where(i => i == itemId).ToArray();
             item.Quantity += cartItems.Count();
             foreach (var cartItem in cartItems)
             {

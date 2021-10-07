@@ -49,3 +49,9 @@
             border: none; 
             transform: scale(0.95);
         }
+
+        .btn-disabled {
+            opacity: 0.5;
+            transition: 0s; 
+            cursor: not-allowed;
+        }

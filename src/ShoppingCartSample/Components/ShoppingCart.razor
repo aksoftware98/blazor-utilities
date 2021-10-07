@@ -1,12 +1,12 @@
 ﻿<h4>My Cart</h4>
 
 <div class="cart-list">
-	@foreach(var item in _cartItems)
+	@foreach(var item in _cartItems.ToList())
 	{
 		<div class="cart-item">
 			<span>@item.Name ($@item.ItemPrice x @item.Quantity) - $@item.TotalPrice</span>
 
-			<span class="remove-btn">X</span>
+			<span class="remove-btn" @onclick="() => RemoveItemFromCart(item.Id)">X</span>
 		</div>
 	}
 </div>

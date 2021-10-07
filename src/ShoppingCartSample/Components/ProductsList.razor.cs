@@ -27,6 +27,20 @@ namespace ShoppingCartSample.Components
 
         private IEnumerable<Item> _items => ItemsService.ListAllItems();
 
+
+        protected override void OnInitialized()
+        {
+            // Subscribe to the item_removed message and just refresh the state of the current component to recalculate the items
+            MessagingCenter.Subscribe<ShoppingCart, Item>(this, "cartitem_removed", (sender, args) =>
+            {
+                StateHasChanged(); 
+            });
+        }
+
+        /// <summary>
+        /// Add item to the cart and push a message holds the added item
+        /// </summary>
+        /// <param name="itemId"></param>
         private void AddItemToCart(string itemId)
         {
             // Get the item from the store
