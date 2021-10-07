@@ -60,6 +60,8 @@ public void SendMessage()
 
 In the destination component all you can do is calling the subscribe method to subscribe for a target of messaging 
 
+Blazor WebAssembly
+
 ``` C#
 public void SubscribeToMessage()
 {
@@ -69,6 +71,24 @@ public void SubscribeToMessage()
 		// If the value is updating the component make sure to call 
 		string greeting = $"Welcome {value}";
 		StateHasChanged(); // To update the state of the component 
+	});
+}
+```
+
+Blazor Server
+
+``` C#
+public void SubscribeToMessage()
+{
+	MessagingCenter.Subscribe<Component1, string>(this, "greeting_message", async (sender, value) => 
+	{
+		// Do actions against the value 
+		// If the value is updating the component make sure to call 
+		// Use InvokeAsync() to switch execution to the Dispatcher when triggering rendering or component state
+		await InvokeAsync(() => {
+			string greeting = $"Welcome {value}";
+			StateHasChanged(); // To update the state of the component 
+		});
 	});
 }
 ```
