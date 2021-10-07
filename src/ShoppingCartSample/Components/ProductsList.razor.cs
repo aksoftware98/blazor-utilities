@@ -15,6 +15,7 @@ using ShoppingCartSample;
 using ShoppingCartSample.Shared;
 using ShoppingCartSample.Services;
 using ShoppingCartSample.Models;
+using AKSoftware.Blazor.Utilities;
 
 namespace ShoppingCartSample.Components
 {
@@ -25,6 +26,18 @@ namespace ShoppingCartSample.Components
         public IItemsService ItemsService { get; set; }
 
         private IEnumerable<Item> _items => ItemsService.ListAllItems();
+
+        private void AddItemToCart(string itemId)
+        {
+            // Get the item from the store
+            var item = _items.SingleOrDefault(i => i.Id == itemId);
+
+            // Add the item to the cart
+            ItemsService.AddItemToCart(itemId);
+
+            // Send a message with the added item to the list holds the sender which is the current component, the kind of the message 'item_added' and the Item object as an argument 
+            MessagingCenter.Send(this, "item_added", item);
+        }
 
     }
 }

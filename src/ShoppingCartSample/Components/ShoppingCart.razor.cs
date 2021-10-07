@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Components;
+﻿using AKSoftware.Blazor.Utilities;
+using Microsoft.AspNetCore.Components;
+using ShoppingCartSample.Models;
 using ShoppingCartSample.Services;
 using System;
 using System.Collections.Generic;
@@ -12,30 +14,41 @@ namespace ShoppingCartSample.Components
         [Inject]
         public IItemsService ItemsService { get; set; }
 
-        private List<CartItem> _items = new()
-        {
-            new CartItem
-            {
-                Id = "543",
-                Name = "Surface Laptop Studio",
-                ItemPrice = 2500,
-                Quantity = 2,
-                TotalPrice = 5000,
-            },
-            new CartItem
-            {
-                Id = "65432",
-                Name = "Surface Pro",
-                ItemPrice = 2200,
-                Quantity = 1,
-                TotalPrice = 2200,
-            }
-        };
+        private List<CartItem> _cartItems = new();
 
         protected override void OnInitialized()
         {
-            //_items = GetCartListFromCart();
+            _cartItems = GetCartListFromCart();
+
+            // Subscribe to the item_added message sent from the ProductsList and fire a callback whenever a new item added to the cart 
+            MessagingCenter.Subscribe<ProductsList, Item>(this, "item_added", (sender, args) =>
+            {
+                // Recaulcate the items in the cart 
+                _cartItems = GetCartListFromCart();
+
+                // Notify the UI about the change
+                StateHasChanged(); 
+            });
         }
+
+        /// <summary>
+        /// Remove a specific Item from Cart
+        /// </summary>
+        /// <param name="itemId"></param>
+        private void RemoveItemFromCart(string itemId)
+        {
+            // Get the item id
+            var item = ItemsService.ListAllItems().SingleOrDefault(i => i.Id == itemId);
+
+            // Remove the item from the cart
+            ItemsService.RemoveItemFromCart(itemId);
+
+            // Send a message to notify other components about the removing process
+            MessagingCenter.Send(this, "item_removed", item);
+        }
+
+
+
 
         private List<CartItem> GetCartListFromCart()
         {
@@ -58,6 +71,9 @@ namespace ShoppingCartSample.Components
 
     }
 
+    /// <summary>
+    /// CartItem is a class that will be used to represent objects in the 
+    /// </summary>
     public class CartItem
     {
         public string Name { get; set; }
