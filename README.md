@@ -75,7 +75,11 @@ public void SubscribeToMessage()
 }
 ```
 
-Blazor Server
+## 🚧⚠️ Blazor Server Notice 🚧⚠️
+
+Becuase Blazor Server working on thread make sure to call that InvokeAsync within the callback
+**Note:** This will be resolved and updated in the version 1.0.1 
+Special thanks for **[Ferenc Czirok](https://github.com/czirok)** for mentioning the note and the following code snippet
 
 ``` C#
 public void SubscribeToMessage()
