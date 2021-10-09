@@ -31,7 +31,7 @@ namespace ShoppingCartSample.Components
         protected override void OnInitialized()
         {
             // Subscribe to the item_removed message and just refresh the state of the current component to recalculate the items
-            MessagingCenter.Subscribe<ShoppingCart, Item>(this, "cartitem_removed", (sender, args) =>
+            MessagingCenter.Subscribe<ShoppingCart, CartItem>(this, "cartitem_removed", (sender, args) =>
             {
                 StateHasChanged(); 
             });
