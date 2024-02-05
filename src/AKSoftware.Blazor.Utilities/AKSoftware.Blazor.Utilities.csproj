@@ -1,15 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <Description>AKSoftware.Blazor.Utilities is a helper package that contains for now a MessagingCenter class that allows developers to write components and send data across them instantly if a super effice way.
 MessaingCenter idea for Blazor was inspired from Xamarin.Forms's MessagingCenter</Description>
     <SynchReleaseVersion>false</SynchReleaseVersion>
-    <PackageVersion>1.0</PackageVersion>
+    <PackageVersion>1.1</PackageVersion>
     <Authors>Ahmad Mozaffar</Authors>
-    <Copyright>Ahmad Mozaffar 2021</Copyright>
+    <Copyright>Ahmad Mozaffar 2024</Copyright>
     <PackageProjectUrl>https://github.com/aksoftware98/blazor-utlities</PackageProjectUrl>
-    <PackageReleaseNotes>The first version that contains the support for the MessagingCenter class to be used to send data across components effeciently</PackageReleaseNotes>
+    <PackageReleaseNotes>Upgrade the package to .NET 8.0</PackageReleaseNotes>
     <PackageTags>aksoftware, blazor, messagingcenter, messagin, xamarin.forms</PackageTags>
     <Title>AKSoftware.Blazor.Utilities</Title>
     <PackageIcon>Blazor Utitlies.png</PackageIcon>
@@ -39,7 +39,7 @@ MessaingCenter idea for Blazor was inspired from Xamarin.Forms's MessagingCenter
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="5.0.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="8.0.0" />
   </ItemGroup>
 
   <ItemGroup>
